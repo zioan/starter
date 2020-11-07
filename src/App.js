@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+//Import components
+import TweetList from "./components/TweetList";
+import CreateTweet from "./components/CreateTweet";
 
 function App() {
+  //Here is the place to write normal js
+  const name = "Zioan";
+  const message = "This is the actual message.";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Hello react</h1>
+      <CreateTweet />
+      <TweetList name={name} message={message} />
     </div>
   );
 }
