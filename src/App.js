@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 //Import components
 import TweetList from "./components/TweetList";
 import CreateTweet from "./components/CreateTweet";
@@ -10,11 +10,16 @@ import CreateTweet from "./components/CreateTweet";
 
 function App() {
   //Here is the place to write normal js
+
   //State
   const [name, setName] = useState("Zioan");
   //State passed to CreateTweet
   const [textInput, setTextInput] = useState("");
   const [tweets, setTweets] = useState([]);
+
+  useEffect(() => {
+    console.log("we run a function");
+  }, [tweets]);
 
   return (
     <div>
