@@ -10,6 +10,7 @@ const TweetList = ({ name, tweets, setName, setTweets }) => {
           tweet={tweet}
           setTweets={setTweets}
           tweets={tweets}
+          key={tweet.id}
         />
       ))}
       ;<button onClick={() => setName("John Doe")}>Click_To_Set_Name</button>
