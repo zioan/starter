@@ -12,7 +12,6 @@ function App() {
   //Here is the place to write normal js
   //State
   const [name, setName] = useState("Zioan");
-  const message = "This is the actual message.";
   //State passed to CreateTweet
   const [textInput, setTextInput] = useState("");
   const [tweets, setTweets] = useState([]);
@@ -26,7 +25,12 @@ function App() {
         tweets={tweets}
         setTweets={setTweets}
       />
-      <TweetList setName={setName} name={name} tweets={tweets} />
+      <TweetList
+        setName={setName}
+        name={name}
+        tweets={tweets}
+        setTweets={setTweets}
+      />
       <button onClick={() => sayHelloHandler("Mike")}>Click</button>
     </div>
   );
