@@ -1,12 +1,11 @@
 import React from "react";
 import Tweet from "./Tweet";
 
-const TweetList = ({ name, message, setName }) => {
+const TweetList = ({ name, tweets, setName }) => {
   return (
     <div className="tweet-list">
-      <Tweet name={name} message={message} />
-      <Tweet name={name} message={message} />
-      <Tweet name={name} message={message} />
+      <Tweet name={name} tweets={tweets} />
+
       <button onClick={() => setName("John Doe")}>Click_To_Set_Name</button>
     </div>
   );
