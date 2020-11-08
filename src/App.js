@@ -2,11 +2,12 @@ import React, { useState } from "react";
 //Import components
 import TweetList from "./components/TweetList";
 import CreateTweet from "./components/CreateTweet";
+import s from "./styles/App.module.css";
 
 //Create functions
-const sayHelloHandler = (user) => {
-  console.log(`Hello ${user}`);
-};
+// const sayHelloHandler = (user) => {
+//   console.log(`Hello ${user}`);
+// };
 
 function App() {
   //Here is the place to write normal js
@@ -18,7 +19,7 @@ function App() {
 
   return (
     <div>
-      <h1>Hello react</h1>
+      <h1 className={s.title}>Twitter Light</h1>
       <CreateTweet
         textInput={textInput}
         setTextInput={setTextInput}
@@ -31,7 +32,7 @@ function App() {
         tweets={tweets}
         setTweets={setTweets}
       />
-      <button onClick={() => sayHelloHandler("Mike")}>Click</button>
+      {/* <button onClick={() => sayHelloHandler("Mike")}>Click</button> */}
     </div>
   );
 }

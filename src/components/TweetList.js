@@ -13,7 +13,7 @@ const TweetList = ({ name, tweets, setName, setTweets }) => {
           key={tweet.id}
         />
       ))}
-      ;<button onClick={() => setName("John Doe")}>Click_To_Set_Name</button>
+      {/* <button onClick={() => setName("John Doe")}>Click_To_Set_Name</button> */}
     </div>
   );
 };
