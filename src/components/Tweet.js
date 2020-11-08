@@ -1,13 +1,13 @@
 import React from "react";
-import s from "../styles/Tweet.module.css";
+import "../styles/Tweet.scss";
 
 const Tweet = ({ name, tweet, tweets, setTweets }) => {
   const deleteTweet = () => {
     setTweets(tweets.filter((state) => state.id !== tweet.id));
   };
   return (
-    <div className={s.tweet}>
-      <h2 className={s.title}>{name}</h2>
+    <div className="tweet">
+      <h2>{name}</h2>
       <h3>{tweet.message}</h3>
       <button onClick={deleteTweet}>Delete</button>
       <button>Like</button>

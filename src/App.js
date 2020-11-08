@@ -2,7 +2,6 @@ import React, { useState } from "react";
 //Import components
 import TweetList from "./components/TweetList";
 import CreateTweet from "./components/CreateTweet";
-import s from "./styles/App.module.css";
 
 //Create functions
 // const sayHelloHandler = (user) => {
@@ -19,7 +18,7 @@ function App() {
 
   return (
     <div>
-      <h1 className={s.title}>Twitter Light</h1>
+      <h1>Twitter Light</h1>
       <CreateTweet
         textInput={textInput}
         setTextInput={setTextInput}
